@@ -165,8 +165,8 @@
       function uploadFile() {
         var fd=new FormData();
         console.log($scope.upload);
-        angular.forEach($scope.upload,function(upload){
-        fd.append('file',upload);
+        angular.forEach($scope.upload,function(file){
+        fd.append('file',file);
         });
       }
 }

@@ -67,7 +67,7 @@
         <td ng-class="{'item-done' : item.isChecked}">{{item.quantity}}</td>
         <td ng-class="{'item-done' : item.isChecked}">{{item.priority}}</td>
         <td ng-class="{'item-done' : item.isChecked}">{{item.note}}</td>
-        <td ng-class="{'item-done' : item.isChecked}">{{item.upload}}</td>
+        <td><img ng-src="{{item.upload}}"></td>
         <td><span class="fa fa-times" ng-click="vm.removeItem(item)"></span></td>
       </tr>
     </tbody>
