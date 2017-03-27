@@ -40,7 +40,8 @@
         quantity: vm.quantity,
         priority: vm.priority,
         note: vm.note,
-        isChecked: vm.isChecked
+        isChecked: vm.isChecked,
+        upload: vm.upload
       });
 
       vm.name = '';
@@ -48,6 +49,7 @@
       vm.priority = '';
       vm.isChecked = false;
       vm.note ='';
+      vm.upload = '';
       
       if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'vm.form.shoppinglistItemForm');
@@ -160,7 +162,13 @@
         vm.error = res.data.message;
       }
     }
-   
-  }
+      function uploadFile() {
+        var fd=new FormData();
+        console.log($scope.upload);
+        angular.forEach($scope.upload,function(upload){
+        fd.append('file',upload);
+        });
+      }
+}
 }
 ());

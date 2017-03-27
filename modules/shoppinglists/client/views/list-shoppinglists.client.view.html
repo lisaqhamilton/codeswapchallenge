@@ -8,7 +8,6 @@
   <div class="list-group">
     <label>Search: <input ng-model="searchText"></label>
     
-
     <a ng-repeat="shoppinglist in vm.shoppinglists | filter:searchText"
        ui-sref="shoppinglists.view({ shoppinglistId: shoppinglist._id })"
        class="list-group-item">

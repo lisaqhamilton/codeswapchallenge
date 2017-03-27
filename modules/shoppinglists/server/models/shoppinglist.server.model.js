@@ -40,8 +40,10 @@ var ShoppinglistSchema = new Schema({
   items: {
     type: Array,
     default: []
+  },
+  upload: {
+    default: ''
   }
-
 });
 
 /*
